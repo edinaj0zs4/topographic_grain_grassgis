@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>GRASS GIS manual: r.tg.geom</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="grassdocs.css" type="text/css">
+</head>
+<body bgcolor="white">
+<div id="container">
+
+<a href="file:///usr/lib/grass72/docs/html/index.html"><img src="grass_logo.png" alt="GRASS logo"></a>
+<hr class="header">
+
+<h2>NAME</h2>
+<em><b>r.tg.geom</b></em>  - Estimates topographic grain
+<h2>KEYWORDS</h2>
+<a href="file:///usr/lib/grass72/docs/html/raster.html">raster</a>, <a href="file:///usr/lib/grass72/docs/html/topic_terrain.html">terrain</a>, <a href="file:///usr/lib/grass72/docs/html/keywords.html#geomorphology">geomorphology</a>, <a href="file:///usr/lib/grass72/docs/html/keywords.html#elevation">elevation</a>, <a href="file:///usr/lib/grass72/docs/html/keywords.html#landform">landform</a>
+<h2>SYNOPSIS</h2>
+<div id="name"><b>r.tg.geom</b><br></div>
+<b>r.tg.geom --help</b><br>
+<div id="synopsis"><b>r.tg.geom</b> [-<b>cg</b>] <b>elevation</b>=<em>name</em> <b>minneighb</b>=<em>integer</em> <b>maxneighb</b>=<em>integer</em>  [<b>user_res</b>=<em>integer</em>]  <b>profile</b>=<em>name</em> <b>table</b>=<em>name</em>  [<b>flattg</b>=<em>float</em>]   [<b>disttg</b>=<em>integer</em>]   [<b>skiptg</b>=<em>integer</em>]   [<b>geom_map</b>=<em>name</em>]   [--<b>overwrite</b>]  [--<b>help</b>]  [--<b>verbose</b>]  [--<b>quiet</b>]  [--<b>ui</b>] 
+</div>
+
+<div id="flags">
+<h3>Flags:</h3>
+<dl>
+<dt><b>-c</b></dt>
+<dd>Creating TG maps</dd>
+
+<dt><b>-g</b></dt>
+<dd>Create geomorphon map with TG value</dd>
+
+<dt><b>--overwrite</b></dt>
+<dd>Allow output files to overwrite existing files</dd>
+<dt><b>--help</b></dt>
+<dd>Print usage summary</dd>
+<dt><b>--verbose</b></dt>
+<dd>Verbose module output</dd>
+<dt><b>--quiet</b></dt>
+<dd>Quiet module output</dd>
+<dt><b>--ui</b></dt>
+<dd>Force launching GUI dialog</dd>
+</dl>
+</div>
+
+<div id="parameters">
+<h3>Parameters:</h3>
+<dl>
+<dt><b>elevation</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name of input elevation model</dd>
+
+<dt><b>minneighb</b>=<em>integer</em>&nbsp;<b>[required]</b></dt>
+<dd>Minimum size of moving window</dd>
+<dd>Default: <em>3</em></dd>
+
+<dt><b>maxneighb</b>=<em>integer</em>&nbsp;<b>[required]</b></dt>
+<dd>Maximum size of moving window</dd>
+<dd>Default: <em>49</em></dd>
+
+<dt><b>user_res</b>=<em>integer</em></dt>
+<dd>Coarser resolution if expected ridgeline-to-channel spacing is large (meter)</dd>
+<dd>Default: <em>0</em></dd>
+
+<dt><b>profile</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name for output TG calculation profile (path\name.pdf)</dd>
+
+<dt><b>table</b>=<em>name</em>&nbsp;<b>[required]</b></dt>
+<dd>Name for output TG calculation table (path\name.csv)</dd>
+
+<dt><b>flattg</b>=<em>float</em></dt>
+<dd>Flatness threshold</dd>
+<dd>Default: <em>0.7</em></dd>
+
+<dt><b>disttg</b>=<em>integer</em></dt>
+<dd>Flatness distance</dd>
+<dd>Default: <em>0</em></dd>
+
+<dt><b>skiptg</b>=<em>integer</em></dt>
+<dd>Skip radius</dd>
+<dd>Default: <em>1</em></dd>
+
+<dt><b>geom_map</b>=<em>name</em></dt>
+<dd>Name for output geomorphometric map</dd>
+<dd>Default: <em>&lt;elevation&gt;_geomorphons_&lt;TG&gt;</em></dd>
+
+</dl>
+</div>
+<div class="toc">
+<h4 class="toc">Table of contents</h4>
+<ul class="toc">
+    <li class="toc"><a href="#description" class="toc">DESCRIPTION</a></li>
+    <li class="toc"><a href="#notes" class="toc">NOTES</a>
+    <ul class="toc">
+        <li class="toc"><a href="#dependencies:" class="toc">Dependencies:</a></li>
+    </ul></li>
+    <li class="toc"><a href="#see-also" class="toc">SEE ALSO</a></li>
+    <li class="toc"><a href="#references" class="toc">REFERENCES</a></li>
+    <li class="toc"><a href="#authors" class="toc">AUTHORS</a></li>
+</ul>
+</div>
+<h2><a name="description">DESCRIPTION</a></h2>
+
+<i>r.tg.geom</i> script is created to calculate topographic grain as
+significant distance of major ridges and valleys to help
+setting proper search parameters for geomorphometric mapping
+especially for <i>r.geomorphon</i> tool which is included with
+suggested settings.
+
+<h2><a name="notes">NOTES</a></h2>
+
+The tool defines the locally significant ridgeline-to-channel spacing by calculating relative relief values with nested neighborhood matrices.<br>
+Relative relief values are plotted against corresponding neighborhood matrice areas and breaks of curve are detected where the convex change of curve is sharpest.
+
+<h3><a name="dependencies:">Dependencies:</a></h3>
+
+R 3.x (packages: spgrass6/rgrass7, ggplot2, plyr) & r.geomorphon add-on
+
+<h2><a name="see-also">SEE ALSO</a></h2>
+
+<em>
+<a href="r.geomorphon.html">r.geomorphon</a>
+</em>
+
+<h2><a name="references">REFERENCES</a></h2>
+
+<ul>
+<li>Mark, D.M., 1975. Geomorphometric parameters: a review and evaluation. Geografiska Annaler. Series A, Physical Geography, Vol. 57, # No. 3/4 (1975), pp. 165-177.</li>
+<li>Pike, R.J., Acevedo,W., Card, D.H., 1989. Topographic grain automated from digital elevation models.
+In: Proceedings of the Ninth International Symposium on Computer Assisted Cartogtraphy.</li>
+SPRS/ASCM, Baltimore, MD, pp. 128-137.
+</ul>
+
+<h2><a name="authors">AUTHORS</a></h2>
+Edina Jozsa<br>
+<i>University of Pécs (Hungary)</i><br>
+Adriana Sarasan<br>
+<i>West University of Timisoara (Romania)</i><br>
+
+<p>
+<i>Last changed: $Date: 2017-03-19 (Sun, 19 March 2017) $</i><h2>SOURCE CODE</h2>
+<p>Available at: <a href="https://trac.osgeo.org/grass/browser/grass/branches/releasebranch_7_2/tmp/grass7-eprecskedi-3634/tmpNWoFhg/r.tg.geom">r.tg.geom source code</a> (<a href="https://trac.osgeo.org/grass/log/grass/branches/releasebranch_7_2/tmp/grass7-eprecskedi-3634/tmpNWoFhg/r.tg.geom">history</a>)</p>
+<hr class="header">
+<p>
+<a href="file:///usr/lib/grass72/docs/html/index.html">Main index</a> |
+<a href="file:///usr/lib/grass72/docs/html/raster.html">Raster index</a> |
+<a href="file:///usr/lib/grass72/docs/html/topics.html">Topics index</a> |
+<a href="file:///usr/lib/grass72/docs/html/keywords.html">Keywords index</a> |
+<a href="file:///usr/lib/grass72/docs/html/graphical_index.html">Graphical index</a> |
+<a href="file:///usr/lib/grass72/docs/html/full_index.html">Full index</a>
+</p>
+<p>
+&copy; 2003-2016
+<a href="http://grass.osgeo.org">GRASS Development Team</a>,
+GRASS GIS 7.2.0 Reference Manual
+</p>
+
+</div>
+</body>
+</html>
