@@ -27,6 +27,7 @@ Installation:
        * this is the Python script loading the R script to do the calculations and create the plots & also to run r.geomorphon if set
 3.  Copy TG_jozsa.R script to path\to\grassversion\scripts folder
        * otherwise the tool will inform you to put it there
+       * tool will automatically install necessary packages, so first time it requires permission to install (or install manually)
 4.  Copy r.tg.geom.bat to path\to\grassversion\bin folder
 5.  Copy r.tg.geom.html help page to path\to\grassversion\docs\html folder
 
