@@ -23,10 +23,10 @@ Installation:
     (g.extension extension=r.geomorphon operation=add)
        * otherwise the tool will inform you, that you miss it
     
-2.  a. Copy r.tg.geom.py script to path\to\grassversion\scripts folder (e.g. X:\Program Files\GRASS GIS 7.2.0\scripts)
-2.  b. Copy TG_jozsa.R script to path\to\grassversion\scripts folder
+2.  Copy r.tg.geom.py script to path\to\grassversion\scripts folder (e.g. X:\Program Files\GRASS GIS 7.2.0\scripts)
+3.  Copy TG_jozsa.R script to path\to\grassversion\scripts folder
        * otherwise the tool will inform you to put it there
-2.  c. Copy r.tg.geom.bat to path\to\grassversion\bin folder
-2.  d. Copy r.tg.geom.html help page to path\to\grassversion\docs\html folder
+4.  Copy r.tg.geom.bat to path\to\grassversion\bin folder
+5.  Copy r.tg.geom.html help page to path\to\grassversion\docs\html folder
 
-3.  Open GRASS GIS and run command r.tg.geom - the tool should work and you should see the available information on manual page
+6.  Open GRASS GIS and run command r.tg.geom - the tool should work and you should see the available information on manual page
