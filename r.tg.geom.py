@@ -235,13 +235,13 @@ def main():
     TGargs = [elevation, str(res_int), str(minneighb), str(maxneighb), outpdf, outcsv, str(int(tgmaps)), str(grassversion)]
     pyscfold = os.path.dirname(os.path.realpath(__file__))
     pathtosc = os.path.join(pyscfold, 'TG_jozsa.R')
-    RSCRIPT = [pathtor, pathtosc] + TGargs
+    myRSCRIPT = [pathtor, pathtosc] + TGargs
     grass.message(_("Starting R to calculate Topographic Grain... this may take some time..."))
     if tgmaps:
         grass.message(_("Will create map of cell-based TG value, relative relief..."))
     try:
         devnull = open(os.devnull, 'w')
-        error = subprocess.call(RSCRIPT, stdout=devnull, stderr=devnull)
+        error = subprocess.call(myRSCRIPT, stdout=devnull, stderr=devnull)
     except:
         grass.fatal("Put TG calculation R script to GRASS scripts folder...")
 
