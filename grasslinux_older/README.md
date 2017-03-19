@@ -23,8 +23,9 @@ Installation:
     (g.extension extension=r.geomorphon operation=add)
        * otherwise the tool will inform you, that you miss it
     
-2.  Copy r.tg.geom.py script to path/to/grassaddons/scripts folder ($HOME/.grass7/addons/scripts)
+2.  Copy r.tg.geom script to path/to/grassaddons/scripts folder ($HOME/.grass7/addons/scripts)
        * find it as $GRASS_ADDON_BASE
+       * this is the Python script loading the R script to do the calculations and create the plots & also to run r.geomorphon if set
 3.  Copy TG_jozsa.R script to path/to/grassaddons/scripts folder
        * otherwise the tool will inform you to put it there
 4.  Copy r.tg.geom.html help page to path/to/grassaddons/docs/html folder
