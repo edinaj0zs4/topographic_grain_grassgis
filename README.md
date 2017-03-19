@@ -27,7 +27,7 @@ Installation:
     (g.extension extension=r.geomorphon operation=add)
        * otherwise the tool will inform you, that you miss it
     
-2.  Install r.tg.geom easy way
+2.  Install r.tg.geom easy way: 
     g.extension extension=r.tg.geom operation=add url=https://github.com/edinaj0zs4/topographic_grain_grassgis
        * for other installation solutions see the subfolders or follow description <a href="https://grasswiki.osgeo.org/wiki/Compile_and_Install#Scripts">here</a>.
 3.  Copy TG_jozsa.R script to path/to/grassaddons/scripts folder ($HOME/.grass7/addons/scripts)
