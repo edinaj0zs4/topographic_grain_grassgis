@@ -241,7 +241,7 @@ def main():
         grass.message(_("Will create map of cell-based TG value, relative relief..."))
     try:
         devnull = open(os.devnull, 'w')
-        error = subprocess.call(myRSCRIPT, stdout=devnull)
+        error = subprocess.call(myRSCRIPT)
     except:
         grass.fatal("Put TG calculation R script to GRASS scripts folder...")
 
