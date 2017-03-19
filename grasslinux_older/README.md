@@ -11,6 +11,7 @@ Dependencies:
 -------------
 
 -   suggested GRASS GIS 7.x
+-   R 3.x (packages: spgrass6/rgrass7, ggplot2, plyr)
 -   Python packages (os, platform, sys, subprocess, csv, grass.script, grass.exceptions)
 -   GRASS GIS addon r.geomorphon 
     https://grass.osgeo.org/grass72/manuals/addons/r.geomorphon.html
@@ -28,6 +29,7 @@ Installation:
        * this is the Python script loading the R script to do the calculations and create the plots & also to run r.geomorphon if set
 3.  Copy TG_jozsa.R script to path/to/grassaddons/scripts folder
        * otherwise the tool will inform you to put it there
+       * tool will automatically install necessary packages
 4.  Copy r.tg.geom.html help page to path/to/grassaddons/docs/html folder
 
 
