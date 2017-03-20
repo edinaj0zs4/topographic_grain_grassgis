@@ -10,7 +10,7 @@ This README provides the information to install r.tg.geom.
 Dependencies:
 -------------
 
--   suggested GRASS GIS 7.x
+-   recommended GRASS GIS 7.x
 -   Python packages (os, platform, sys, subprocess, csv, grass.script, grass.exceptions)
 -   GRASS GIS addon r.geomorphon 
     https://grass.osgeo.org/grass72/manuals/addons/r.geomorphon.html
