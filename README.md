@@ -33,5 +33,7 @@ Installation:
 
 4.  Open GRASS GIS and run command r.tg.geom - the tool should work and you should see the available information on manual page
 
-# under development!
-*Aim of the project is to create a raster add-on for GRASS GIS, that estimates the significant ridgeline-to-channel spacing to help setting proper search parameters for geomorphometric mapping.
+- under development! -
+Aim of the project is to create a raster add-on for GRASS GIS, that estimates the significant ridgeline-to-channel spacing to help setting proper search parameters for geomorphometric mapping.
+This is part of my PhD research regarding DEM/DSM based geomorphological mapping with semi-automated landform delineation algorithms.
+The tool works, but the codes and possibly the algorithm could be further improved.
