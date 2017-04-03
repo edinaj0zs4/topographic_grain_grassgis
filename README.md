@@ -1,6 +1,3 @@
-# under development!
-*Aim of the project is to create a raster add-on for GRASS GIS, that estimates the significant ridgeline-to-channel spacing to help setting proper search parameters for geomorphometric mapping.
-
 Topographic Grain
 ==================
 In this subfolder are the necessary files to use the script tool on GRASS GIS versions on Linux (Tested on Ubuntu with 7.x.)
@@ -36,3 +33,5 @@ Installation:
 
 4.  Open GRASS GIS and run command r.tg.geom - the tool should work and you should see the available information on manual page
 
+# under development!
+*Aim of the project is to create a raster add-on for GRASS GIS, that estimates the significant ridgeline-to-channel spacing to help setting proper search parameters for geomorphometric mapping.
