@@ -37,3 +37,7 @@ Installation:
 Aim of the project is to create a raster add-on for GRASS GIS, that estimates the significant ridgeline-to-channel spacing to help setting proper search parameters for geomorphometric mapping.
 This is part of my PhD research regarding DEM/DSM based geomorphological mapping with semi-automated landform delineation algorithms.
 The tool works, but the codes and possibly the algorithm could be further improved.
+
+- acknowledgements - 
+The author would like to express her gratitude for the colleagues of the Department of Physical and Environmental Geography for the professional advices on the project and the support of the Doctoral School of Earth Sciences, University of Pécs. The present scientific contribution is dedicated to the 650th anniversary of the foundation of the University of Pécs.
+The research of Edina Józsa was supported by the Human Capacities Grant Management Office and the Hungarian Ministry of Human Capacities in the framework of the NTP-NFTÖ-16 project.
