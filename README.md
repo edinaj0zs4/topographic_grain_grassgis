@@ -1,4 +1,4 @@
-Topographic Grain
+# Topographic Grain
 ==================
 In this subfolder are the necessary files to use the script tool on GRASS GIS versions on Linux (Tested on Ubuntu with 7.x.)
 - To the best of my knowledge it is up to date and works, but please compare the change date to the version in root.
@@ -7,7 +7,7 @@ In this subfolder are the necessary files to use the script tool on GRASS GIS ve
 This README provides the information to install r.tg.geom.
 
 
-Dependencies:
+## Dependencies:
 -------------
 
 -   GRASS GIS 7.2
@@ -16,7 +16,7 @@ Dependencies:
 -   GRASS GIS addon r.geomorphon 
     https://grass.osgeo.org/grass72/manuals/addons/r.geomorphon.html
 
-Installation:
+## Installation:
 -------------
 * Supposing you have a GRASS GIS 7.2 installed.
 
@@ -33,11 +33,11 @@ Installation:
 
 4.  Open GRASS GIS and run command r.tg.geom - the tool should work and you should see the available information on manual page
 
-- under development! -
+#### under development!
 Aim of the project is to create a raster add-on for GRASS GIS, that estimates the significant ridgeline-to-channel spacing to help setting proper search parameters for geomorphometric mapping.
 This is part of my PhD research regarding DEM/DSM based geomorphological mapping with semi-automated landform delineation algorithms.
 The tool works, but the codes and possibly the algorithm could be further improved.
 
-- acknowledgements - 
+#### acknowledgements
 The author would like to express her gratitude for the colleagues of the Department of Physical and Environmental Geography for the professional advices on the project and the support of the Doctoral School of Earth Sciences, University of Pécs. The present scientific contribution is dedicated to the 650th anniversary of the foundation of the University of Pécs.
 The research of Edina Józsa was supported by the Human Capacities Grant Management Office and the Hungarian Ministry of Human Capacities in the framework of the NTP-NFTÖ-16 project.
