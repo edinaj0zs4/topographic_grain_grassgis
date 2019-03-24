@@ -33,7 +33,7 @@ if (Sys.info()["sysname"] != "Windows") {
 	if (grassversion == 7) {
 			checkinstall <- suppressWarnings(require(rgrass7))
 		if (checkinstall=="FALSE") {
-				install.packages("GRANbase", dep=TRUE, lib=installib, repos='http://cran.us.r-project.org')
+				install.packages("rgrass7", dep=TRUE, lib=installib, repos='http://cran.us.r-project.org')
 				library(rgrass7)
 		} else {library(rgrass7)}
 	} else {
@@ -62,7 +62,7 @@ if (Sys.info()["sysname"] != "Windows") {
 ### steps resulting maximum TG for area
 #
 ## Set elevation map as MASK for GRASS
-execGRASS("g.rename", raster=c(ELEVATIONTG,"MASK"))
+execGRASS("g.rename", raster=c(ELEVATIONTG,"MASK"), flags=c("overwrite"))
 #
 # Cells number of neighborhood windows
 CELLS <- data.frame("NBNUMBER"=c(3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99), "CELLNUMBER"=c(5,13,29,49,81,121,169,225,289,361,441,529,625,729,841,961,1089,1225,1369,1521,1681,1849,2025,2209,2401,2601,2809,3025,3249,3481,3721,3969,4225,4489,4761,5041,5329,5625,5929,6241,6561,6889,7225,7569,7921,8281,8649,9025,9409))
